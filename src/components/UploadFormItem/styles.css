@@ -1,0 +1,41 @@
+.upload-button{
+    width: 100%;
+}
+.form-upload-item .ant-upload-select{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0.5rem;
+    border: solid 1px #707070;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+.form-upload-item .ant-upload-select:hover{
+    border: solid 1px #707070;
+    border-radius: 15px;
+}
+.upload-button-icon{
+    margin-top: 10%;
+    font-size: 1.5rem;
+}
+.upload-button-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #585858;
+}
+.upload-button-content{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #585858;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.form-upload-item .ant-upload-list-picture-card-container{
+    width: 100%;
+    /* height: 100%; */
+}
+.form-upload-item .ant-upload-list-item{
+    width: 100%;
+    height: 100%;
+}

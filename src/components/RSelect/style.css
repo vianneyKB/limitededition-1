@@ -1,0 +1,17 @@
+.name-select .ant-select-selection-item {
+    font-family: 'Open Sans' !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+}
+
+.down-arrow-icon {
+    height: 9px;
+    width: 18px;
+}
+
+.dark {
+    background-color: #000000;
+    color: white;
+    border-radius: 19px;
+}
