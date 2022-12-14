@@ -1,0 +1,230 @@
+.library-page .header-text{
+    letter-spacing: 1.39px;
+    color: #585858;
+    font-weight: bold;
+    font-size: 25px;
+}
+.library-page .library-search .ant-input-wrapper{
+    max-width: 227px;
+}
+.library-page .library-search .ant-input-wrapper input{
+    border-radius: 19px 0px 0px 19px;
+    border: 1px solid #707070;
+    outline: none;
+    border-right: none;
+    box-shadow: none;
+    /* height: 37px; */
+}
+.library-page .library-search .ant-input-wrapper input::placeholder{
+    color: #585858;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.5;
+}
+.library-page .library-search .ant-input-wrapper .ant-input-search-button{
+    border-radius: 0px 19px 19px 0px !important;
+    border: 1px solid #707070;
+    outline: none;
+    border-left: none;
+    /* height: 37px; */
+}
+.library-page .library-search .ant-input-wrapper .ant-input-group-addon{
+    border-radius: 0px 19px 19px 0px !important;
+    outline: none;
+}
+.library-page .label-text{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #585858;
+}
+.library-page .label-text-big{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #585858;
+}
+.mr-2{
+    margin-right: 2rem;
+}
+.library-page .image-footware{
+    opacity: 1;
+}
+.library-input{
+    border-radius: 19px 19px 19px 19px;
+    border: 2px solid #707070;
+    outline: none;
+    box-shadow: none;
+    max-width: 200px;
+}
+.library-input::placeholder{
+    color: #585858;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.5;
+}
+.library-select{
+    width: 100%;
+    max-width: 200px;
+}
+.library-select .ant-select-selector{
+    border-radius: 19px 19px 19px 19px !important;
+    border: 2px solid #707070 !important;
+    outline: none;
+    box-shadow: none;
+}
+.library-select .ant-select-selection-placeholder{
+    color: #585858;
+    font-size: 0.8rem;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.library-page .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.library-page .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.library-page .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.library-page .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.library-page .slider::after {
+    position: absolute;
+    content: "";
+    height: 11px;
+    width: 11px;
+    left: 4.5px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: #000000;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.library-page input:checked + .slider {
+    background-color: #000;
+}
+
+.library-page input:focus + .slider {
+    box-shadow: 0 0 1px #000;
+}
+
+.library-page input:checked + .slider:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+}
+
+.library-page input:checked + .slider:after {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+}
+
+/* Rounded sliders */
+.library-page .slider.round {
+    border-radius: 34px;
+}
+
+.library-page .slider.round:before {
+    border-radius: 50%;
+}
+.library-private{
+    display: flex;
+    align-items: center;
+}
+/* .library-preview-image{
+    width: 100%;
+    border-radius: 20px;
+} */
+.library-submit-button{
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+}
+.library-submit-button:hover{
+    opacity: 0.5;
+}
+.preview-container{
+    position: relative;
+    width: 100%;
+}
+.preview-container:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+}
+.preview-container img {
+    position: absolute; /* Take your picture out of the flow */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Make the picture taking the size of it's parent */
+    width: 100%; /* This if for the object-fit */
+    height: 100%; /* This if for the object-fit */
+    object-fit: contain; /* Equivalent of the background-size: cover; of a background-image */
+    object-position: center;
+    border-radius: 20px;
+}
+.preview-no-image{
+    letter-spacing: 1.39px;
+    color: #585858;
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.text-align-center{
+    text-align: center;
+}
+.library-page .btn-reset{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.library-page .list-image{
+    grid-template-columns: repeat( auto-fit, minmax(70px, 80px) );
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin: 1rem;
+    height: auto;
+    display: grid;
+}

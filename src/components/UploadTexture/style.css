@@ -1,0 +1,247 @@
+.upload-texture__modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(149, 149, 149, 0.1);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    padding: 30px 55px 30px 45px;
+    align-items: center;
+    z-index: 3;
+}
+
+.upload-texture__modal-container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 49px;
+    padding: 33px 62px 57px;
+    display: flex;
+    flex-direction: column;
+    /* min-width: 750px; */
+}
+
+.option-materials__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.upload-texture__title {
+    font-family: "Open Sans";
+    font-size: 25px;
+    font-weight: bold;
+    color: #585858;
+    margin-bottom: 17px;
+}
+
+.upload-texture__instruction {
+    margin-bottom: 34px;
+}
+
+.upload-texture__instruction p {
+    margin: 0;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.upload-texture__select-material {
+    margin-bottom: 17px;
+}
+
+.upload-texture__main-body {
+    flex-grow: 1;
+}
+
+.main-body__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#img-upload__container {
+    cursor: pointer;
+    position: relative;
+}
+
+.img-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.option-materials__container {
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 46px;
+    width: 100%;
+}
+
+.option-materials__submit-btn {
+    width: 368px;
+    height: 37px;
+    background: #2BBFE9 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-materials__list {
+    flex-grow: 1;
+    /* height: 0; */
+    overflow-y: hidden;
+}
+
+.option-materials__list-container {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.scroll-list {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.option-materials__list-container::-webkit-scrollbar {
+    width: 0;
+}
+
+.option-materials__flex {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    display: grid;
+}
+
+.wrap-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-texture {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    cursor: default;
+    float: left;
+    height: 150px;
+    width: 120px;
+}
+
+.add-texture__btn {
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    color: white;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 18px;
+    width: 57px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-texture__name {
+    color: #717171;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mb--13 {
+    margin-bottom: 13px;
+}
+
+.mr--45 {
+    margin-right: 45px;
+}
+
+.mb--55 {
+    margin-bottom: 55px;
+}
+
+.custom-select {
+    transform: translateY(-5px);
+    flex-grow: initial !important;
+}
+
+.custom-select > .ant-select-selector {
+    padding: 0 !important;
+    padding-right: 15px !important;
+}
+
+.custom-select .ant-select-selection-item {
+    color: #717171 !important;
+    font-size: 14px !important;
+}
+
+.selected-item .custom-select .ant-select-selection-item, .selected-item .add-texture__name{
+    color: #E80EB6 !important;
+    font-weight: bold !important;
+}
+
+.selected-item > .add-texture__btn {
+    background-color: #E80EB6;
+}
+
+.img-full-box {
+    height: 100%;
+    width: 100%;
+}
+
+.custom-select__materials .ant-select-selection-item {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    font-family: 'Open Sans';
+    color: white !important;
+}
+
+.relative-parent {
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+.edit-tb__upload-modal {
+    outline: none;
+    border-radius: 4px;
+    max-width: 100px;
+}
+
+/* width */
+.main-scrollbar::-webkit-scrollbar {
+    width: 0;
+}
