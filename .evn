@@ -1,1 +1,2 @@
 REACT_APP_BASE_URL = https://nhan.tech:4000/api
+DB_URL=mongodb+srv://LimitedED:Lim.vny0123@limitededcluster.ouw1mqd.mongodb.net/?retryWrites=true&w=majority

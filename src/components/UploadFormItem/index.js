@@ -4,6 +4,7 @@ import React, { forwardRef, useEffect, useImperativeHandle, useState } from "rea
 import {REACT_APP_BASE_URL} from '../../utils/axiosConfig'
 import './styles.css'
 
+// reading files
 const getBase64 = (file) =>
     new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -14,14 +15,15 @@ const getBase64 = (file) =>
         reader.onerror = (error) => reject(error);
     });
 
-const beforeUpload = (file) => {
+// checking if file type is jpg or png and size
+const beforeUpload = (file) => 
+{
     // const isJpgOrPng = file.type === "image/jpeg" || file.type === "image/png";
 
     // if (!isJpgOrPng) {
     //     message.error("You can only upload JPG/PNG file!");
     // }
     const isJpgOrPng = true;
-
     const isLt2M = file.size / 1024 / 1024 < 50;
 
     if (!isLt2M) {
@@ -108,7 +110,8 @@ const UploadFormItem = forwardRef((props, ref) => {
             }
         }
     };
-
+    
+// upload button 
     const uploadButton = (
         <div className="upload-button">
             <UploadOutlined className='upload-button-icon'/>

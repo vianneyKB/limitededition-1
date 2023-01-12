@@ -29,7 +29,7 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    // console.log(error);
+    console.log(error);
 
     if (error && error.response && error.response.status === 401) {
       // redirect to login

@@ -4,11 +4,7 @@ import { Layout, Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import ModelViewer from './components/ModelViewer';
 import LELogo from './assets/logo/LElogo.png'
-import {
-  BrowserRouter as Router,
-  Routes as Switch,
-  Route,
-  Link
+import { BrowserRouter as Router, Routes as Switch, Route, Link
 } from "react-router-dom";
 // import TotPage from './components/TOTPage/TotPage';
 // import TestCanvas from './components/TestCanvas/TestCanvas';
@@ -18,8 +14,19 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Library from './components/Library';
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
+import Reset from './components/pages/Reset';
+import Dashboard from './components/pages/Dashboard'
 
+// using bcrypt to  user password
+const bcrypt = require('bcrypt');
+const User = require('./store/userModel');
 const { Header, Content } = Layout;
+// require database connection
+const dbConnection = require('./store/dbConnect');
+// execute database to see the connection
+dbConnection();
 
 const App = ({}) => {
   return (<>
@@ -35,12 +42,10 @@ const App = ({}) => {
             </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: '#f8f8f8' }}/>
         <Navbar.Collapse id="basic-navbar-nav">
-        <Nav
-            className="me-auto my-2 my-lg-0"
-            navbarScroll
-          >
-            <Nav.Link href="#action1"><div className='item-header mr--86 cursor-pointer actived'>Home</div></Nav.Link>
+        <Nav className="me-auto my-2 my-lg-0" navbarScroll >
+            <Nav.Link href="/"><div className='item-header mr--86 cursor-pointer actived'>Home</div></Nav.Link>
             <Nav.Link href="/library"><div className='item-header mr--86 cursor-pointer'>Library</div></Nav.Link>
+            <Nav.Link href="/library"><div className='item-header cursor-pointer'>Tutorials</div></Nav.Link>
             <Nav.Link href="#action3"><div className='item-header cursor-pointer'>Tutorials</div></Nav.Link>
 
             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
@@ -57,9 +62,11 @@ const App = ({}) => {
               Link
             </Nav.Link> */}
           </Nav>
-          <div className='d-flex align-center h-100'>
+            <Nav.Link href="/login"><div className='d-flex align-center h-100'>
               <div className='login-btn cursor-pointer'>Login</div>
-            </div>
+            </div></Nav.Link>
+            <Nav.Link href="/register"><div className='item-header cursor-pointer'>Register</div></Nav.Link>
+
         {/* <Row className='h-100 w-100 justify-content-end'>
           <Col lg={12} xl={12}>
             <div className='d-flex align-center h-100'>
@@ -83,6 +90,10 @@ const App = ({}) => {
             <Route exact path="/" element={<ModelViewer isCustomizeMode={false}/>}/>
             <Route exact path="/customize-model" element={<ModelViewer isCustomizeMode={true}/>}/>
             <Route exact path="/library" element={<Library />}/>
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/reset" element={<Reset />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
           </Switch>
         </div>
       </Content>

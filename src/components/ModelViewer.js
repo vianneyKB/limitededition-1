@@ -16,6 +16,7 @@ import Col from 'react-bootstrap/Col';
 import { Spin } from "antd";
 import { LoadingOutlined } from '@ant-design/icons';
 import { throttle } from 'lodash-es';
+
 const Model = ({model}) => {
   const { setSize } = useThree();
   useEffect(() => {
